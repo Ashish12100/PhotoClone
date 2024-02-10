@@ -27,8 +27,7 @@ PhotoClone is a web application developed using Spring Boot, H2 Database, HTML, 
 - Web browser
 
  ## Contact
-Author: <Puppala Ashish>
-<br>
+Author: <PuppalaAshish>
 Email: <Puppalaashish12@gmail.com>
 
 
