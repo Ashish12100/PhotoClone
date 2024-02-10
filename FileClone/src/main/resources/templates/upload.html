@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Photo Upload</h2>
+<input id="fileupload"   type="file" name="fileupload" />
+
+<button id="upload-button" onclick="uploadFile()"> Upload </button>
+
+<style>
+    h2{
+        color: white;
+        text-align: center;
+
+        background-color: black
+    }
+    button{
+        color:black;
+        background-color:white;
+
+
+    }
+    input{
+        color:black;
+    }
+    body{
+        align-items: center;
+    }
+</style>
+
+<script>
+    async function uploadFile() {
+        let formData = new FormData();
+        formData.append("data", fileupload.files[0]);
+        await fetch('http://localhost:8080/photoz', {
+            method: "POST",
+            body: formData
+        }).then(result =>    result.text())
+            .then(text => alert(text));
+    }
+</script>
+</body>
+</html>
